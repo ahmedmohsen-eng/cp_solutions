@@ -26,7 +26,7 @@ void solve(const int& tt){
         // then the first number divisible by mod is step*mod so before it there were (mod-1) numbers which are not divisible by mod so ans after modulus is zero at the (mod)th number
               // as said in the previous example:
                       // 7 14 ... 70
-                      //           ^ the (mod)th number is the first which have result with zero after (%) 
+                      //           ^ the (mod)th number is the first which have result with zero after (%) ,, because gcd(step,mod)=1
   
     
   //after that the period repeats because of the logic of % depends on periods
