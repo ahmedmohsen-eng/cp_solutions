@@ -27,10 +27,22 @@ void solve(const int& tt){
               // as said in the previous example:
                       // 7 14 ... 70
                       //           ^ the (mod)th number is the first which have result with zero after (%) 
+  
+    
   //after that the period repeats because of the logic of % depends on periods
   // so the only condition is to have __gcd(step,mod)=1
 
 
+  //
+  // this happens because if you see numbers :
+  // 7x1  7x2 7x3 7x4 .........  7x10 (=70)
+  //so numbers before 7x10 are not divisible by 10 
+  //because 7 itself has no commmon divisors that complement with any of previous elements of 10
+  //and of course (NO) elements before 10 are divisible by 10
+  //
+
+
+  
 
   // take care of representation mistakes
   
