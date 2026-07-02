@@ -38,8 +38,11 @@ void solve(const int& tt){
 
   
     int x,y;
-    while(cin>>x>>y){
-        cout<<setw(10)<<x<<setw(10)<<y<<"    ";
+    while(cin>>x>>y){          // number of lines are not determined
+        cout<<setw(10)<<x<<setw(10)<<y<<"    ";    // the setw(x) makes x spaces and then fill from the right column starting at column number x
+                                                                // for example if setw(10)
+                                                                    // .........1     << i mean spaces instead of points  , here only one space consumed out of 10
+                                                                    // ........10     << here one space was consumed because it is a 2-digits number
         if((__gcd(x,y)==1)) cout<<"Good Choice\n\n";
         else cout<<"Bad Choice\n\n";
     }
