@@ -37,7 +37,7 @@ void solve(const int& tt){
   // this happens because if you see numbers :
   // 7x1  7x2 7x3 7x4 .........  7x10 (=70)
   //so numbers before 7x10 are not divisible by 10 
-  //because 7 itself has no commmon divisors that complement with any of previous elements of 10
+  //because 7 itself has no common divsiors with 10 that complement with any of previous elements of 10 to make it perfectly divisble by 10 achiving % = 0
   //and of course (NO) elements before 10 are divisible by 10
   //
 
