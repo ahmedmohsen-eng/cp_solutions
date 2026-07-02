@@ -40,6 +40,8 @@ void solve(const int& tt){
   //because 7 itself has no common divsiors with 10 that complement with any of previous elements of 10 to make it perfectly divisble by 10 achiving % = 0
   //and of course (NO) elements before 10 are divisible by 10
   //
+  //so because there may be be elements before 10 which : 10 are divisible by them  .. i mean may be 10%x=0 but what matters is x%110=0 not vice versa
+  // but the 7*that element is not divisible by 10
 
 
   
