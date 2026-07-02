@@ -73,3 +73,44 @@ signed main(){
     
     
 }
+
+
+
+
+
+
+
+
+//if you didn't understand explanation here is one by copilot:
+
+    /*
+     * PROBLEM INSIGHT:
+     * We need to determine if step sizes x and y will eventually both land on 
+     * the same line after some number of steps.
+     * 
+     * MATHEMATICAL PRINCIPLE:
+     * Consider sequences: x, 2x, 3x, ... (mod total) and y, 2y, 3y, ... (mod total)
+     * 
+     * Example with x=7, mod=10:
+     *   Sequence: 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, ...
+     *   After mod: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0, ...
+     *   
+     * The period is determined by gcd(x, mod):
+     * - If gcd(x, mod) = 1 (coprime): period = mod, covers all residues 0 to mod-1
+     * - If gcd(x, mod) > 1: period < mod, covers only gcd(x, mod) residues
+     * 
+     * WHY COPRIME MATTERS:
+     * Two sequences will hit the same point (% 0) if and only if:
+     * gcd(x, y) = 1
+     * 
+     * When gcd(x, y) = 1:
+     * - The two step sizes are coprime
+     * - They will eventually synchronize and land on the same line
+     * - This is a "Good Choice" for the problem
+     * 
+     * When gcd(x, y) > 1:
+     * - They share common factors
+     * - They will never synchronize properly
+     * - This is a "Bad Choice"
+     */
+  
