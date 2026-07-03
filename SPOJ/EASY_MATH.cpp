@@ -29,6 +29,7 @@ int ie_divison(int&n,int&a,int&d){
                 for(int l=0 ; l<2 ; l++){
                     for(int m=0 ; m<2; m++){    
                         int dd=1, elementsCnt=0;  //dd here is the digit here (what matters is lcm, because it makes)
+                                                      //it is the digit that we check if n is divisible by it  ,,  and it is formed by lcm of all selected choices
                         
                         if(i)dd= Lcm(dd, a) ,elementsCnt++;
                         if(j)dd= Lcm(dd, a+d) ,elementsCnt++;
