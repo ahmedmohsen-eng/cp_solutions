@@ -64,6 +64,8 @@ void solve(const int& t){
     
     
     // so it is 2^number of zeros * number of ones ==> this include empty subsequence in somecases so it is already counted
+    //this is because for zeros you can remove or take so it is 2^      ,, but for ones you can remove one each time which means it is number of ones
+    // so muliplying both gives you              2^number of zeros    *    number of ones
     //but if not ones so ans is zero
     
     int ones=0,zeros=0;
