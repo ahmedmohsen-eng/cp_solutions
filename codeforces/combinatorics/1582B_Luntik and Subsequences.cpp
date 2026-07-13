@@ -54,11 +54,13 @@ void solve(const int& t){
     int n; cin>>n;
     vector<int>v(n);
     for(auto&x:v)cin>>x;
+    // you don't need a vector you can count number of zeros while taking input in tmp(temporary) variable<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    
     
     //putting all zeros and ones at the beginning
     sort(v.begin(),v.end()); // order doesn't matter in sequences
     
-    
+    //more efficient than sorting is to count in a linear scan <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     
     
     // so it is 2^number of zeros * number of ones ==> this include empty subsequence in somecases so it is already counted
@@ -82,7 +84,7 @@ void solve(const int& t){
     while(zeros--){
         cur*=2;
     }
-    
+    // you can use fastpow fun<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     
     cout<< cur*ones<<'\n';
     
