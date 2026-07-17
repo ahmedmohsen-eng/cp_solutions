@@ -134,7 +134,7 @@ void solve(const int& t){
     
     
     
-    //old logic : 
+    //old logic : actually this caused tle (time limit exceeded)
     // vector<int>kth_prime={2};//adding the first prime which is 2 and then walk on odds only to walk only n/2 instead of n
     // for(int i = 3 ;i < N ; i+=2){
     //     if(isprime[i])kth_prime.push_back(i);
