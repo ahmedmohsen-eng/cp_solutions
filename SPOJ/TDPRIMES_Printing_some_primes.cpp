@@ -43,7 +43,7 @@ int no_divisors(int n){
 
 
 
-vector<char> sieve(int n){
+vector<bool> sieve(int n){
     //bool vs char:
     //char is (sometimes) faster because it is bit by bit ,, but bool is bits beside each other
     //but when i tried both actually (bool) was faster in the sieve
@@ -67,7 +67,7 @@ vector<char> sieve(int n){
     //optimized to walk from current_prime*current_prime
     //then walk till you reach n
     
-    vector<char> isprime(n+1,true);//+1 to take the number itself 
+    vector<bool> isprime(n+1,true);//+1 to take the number itself 
     //after n+1 also this part is safe which is initializing 0 and 1
     isprime[0]=isprime[1]=0;
     for(int i=2 ; i <=n; i++){
@@ -116,7 +116,7 @@ void solve(const int& t){
     //end_dbg
     
     int N=1e8;// no +1 because we want less not less than or equal
-    vector<char> isprime = sieve( N );
+    vector<bool> isprime = sieve( N );
     
     //logic for printing 1mod100 (1st,101st,201st,...) primes:
     cout<<2<<'\n';
