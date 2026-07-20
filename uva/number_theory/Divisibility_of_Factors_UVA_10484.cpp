@@ -115,7 +115,7 @@ after you get the factors of prime to know the number of divisors (not prime onl
 
 
 
-
+and notice that d is handled if negative to be positive (acutllly it doesn't affect number of divisors mathematically ) but to save logic of when reaching negative power because not having it
 */
 
 
