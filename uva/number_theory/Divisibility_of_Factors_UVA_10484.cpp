@@ -64,6 +64,61 @@ void solve(const int& t){
                 // if 6 so divide by /6 because you removed cases when 2 are removed completely
                                             // and you also removed cases when 3 are removed completely
     //
+
+
+
+
+
+
+
+/*
+
+idea :
+factorial of n is 1x2x3x4...xn
+so get factors of 1,2,3,4...,n and store them all  ,, this is the way to factorize the prime
+
+
+after you get the factors of prime to know the number of divisors (not prime only) divisible by d:
+    actually when you try to get the number of divisors you make the sum for each power :  power+1 : power1+1 * power2+2 * power3+1 * power4+1 ...............
+    when you try to find divisors divisible by prime x , in that prime you don't include +1 , there is a reason for that : you remove the optino that it was not taken
+            //also you should notice that if the number doesn't contain that factor so it is impossible to be divisible by it
+    also when you want prime x and prime y to be always counted you remove the options of not taking them ...but how?
+    visualization:
+       for example factors of 36:2^2 * 3^2
+                        which are :
+                                        2^0  3^0
+                                        2^1  3^1
+                                        2^2  3^2
+                                    now number of these divisors = 2x3=6
+                                and now to get the number of divisors (from combinatorics) you multiply first options x second options
+                        //now imagine i told you to tell me divisors divisible by 2
+                            so you should remove option of 2^0 :
+                                        2^1  3^0
+                                        2^2  3^1
+                                             3^2
+                                        and when i tell you i want divisors divisible by 6 , the 6=2^1 * 3^1
+                                            so you remove the option of not having any twos and the option of not having any threes:
+                                                2^1  3^1
+                                                2^2  3^2
+                                            now number of these divisors is 2x2=4
+                                        what if  said divisors divisible by 12 ?? 
+                                                // you should think of removing option of not having any twos and not having any threes ,(and having only one of 2s) because 12 has two 2s in its factorization
+                                            //so to do such thing:     
+                                                                    2^2  3^1
+                                                                         3^2
+                                                        number of divisors : 2x1=2
+                                    /////////////////////////mm.
+                                    notice something??:
+                                            you remove the factors of this number which you want to get divisors divisible by it
+                                                        // or in other words you divide by it!!!!!!!!!
+                                            // but you only need to check that in its factorization there is no prime factor has power with more value than the number it self which is for example 100!
+
+
+
+
+*/
+
+
     
     
     auto factorize_all = [](int x){
