@@ -206,3 +206,112 @@ signed main(){
     
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ai explanation : 
+
+/*
+Idea:
+
+The prime factorization of
+
+    n! = 1 × 2 × 3 × ... × n
+
+is obtained by factorizing every integer from 1 to n and summing the
+exponents of each prime.
+
+Suppose
+
+    n! = p1^a1 · p2^a2 · ...
+
+Then the number of divisors of n! is
+
+    (a1 + 1)(a2 + 1)...
+
+because each prime exponent can be chosen independently from 0 to ai.
+
+------------------------------------------------------------
+
+Now suppose we only want divisors that are divisible by d.
+
+Let
+
+    d = p1^b1 · p2^b2 · ...
+
+Every valid divisor must contain at least bi copies of each prime pi.
+
+Therefore, for every prime in d, the exponent can no longer start from 0.
+Instead, it starts from bi.
+
+This is equivalent to subtracting the exponents of d from those of n!:
+
+    ai ← ai − bi
+
+If any exponent becomes negative, then d does not divide n!, so the answer
+is zero.
+
+Otherwise, the number of valid divisors becomes
+
+    ∏ (ai − bi + 1).
+
+------------------------------------------------------------
+
+Example:
+
+    36 = 2² × 3²
+
+All divisors correspond to choosing
+
+    exponent of 2 ∈ {0,1,2}
+    exponent of 3 ∈ {0,1,2}
+
+giving
+
+    (2 + 1)(2 + 1) = 9 divisors.
+
+If we require divisibility by 6 = 2 × 3,
+
+then
+
+    exponent of 2 ∈ {1,2}
+    exponent of 3 ∈ {1,2}
+
+which gives
+
+    2 × 2 = 4 divisors.
+
+If we require divisibility by 12 = 2² × 3,
+
+then
+
+    exponent of 2 ∈ {2}
+    exponent of 3 ∈ {1,2}
+
+giving
+
+    1 × 2 = 2 divisors.
+
+The implementation follows exactly this observation by subtracting the
+prime exponents of d from those of n! before computing the divisor count.
+*/
+
+
+
+
+
+
+
+
+
+*/
